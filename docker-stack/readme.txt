@@ -6,6 +6,11 @@ file: docker-stack/readme.txt
 links:
 https://training.play-with-docker.com/ops-s1-swarm-intro/#
 
+
+commands
+docker stack ls
+docker stack services voting_stack
+
 commands/steps:
 1. navigate to https://labs.play-with-docker.com and login
 2. in teplates select "one manager, one worker"
