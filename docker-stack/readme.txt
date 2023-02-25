@@ -13,7 +13,7 @@ commands/steps:
    git clone https://github.com/VladimirN73/postgres_01
    cd postgres_01
    cd docker_stack
-   docker stack deploy --compose-file=docker-stack.yml voting_stack
+   docker stack deploy --compose-file=docker-stack.yml erp_stack
 
 
 
