@@ -7,10 +7,14 @@ add backend with swagger and connection to DB, run the app in containers (in doc
 NEXT STEPS
 deploy current docker-compose to the cloud (shall we deploy pgadmin too?)
 
+DONE
+* deploy to PWD (play with docker)
 
 ===================================================
 History (newest on top)
 ===================================================
+23.02.23 add docker-stack (run in PWD Play With Docker)
+2022 
 dotnet list package --outdated --interactive
 dotnet tool update --global dotnet-ef 
 dotnet ef migrations add "orderDate" --context "ApiDbContext"
