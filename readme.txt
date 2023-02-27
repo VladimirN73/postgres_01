@@ -6,15 +6,24 @@ add backend with swagger and connection to DB, run the app in containers (in doc
 
 
 NEXT STEPS
-deploy current docker-compose to the cloud (shall we deploy pgadmin too?)
+1. * create docker image (localy) and upload it do docker-hub
+   * use the uploaded docker image in docker-compose
+   * use the uploaded docker image in docker-stack
+   
+2. Create image (for app) by push into github, and upload it to docker-hub
+   
+2. deploy docker-compose to the azure-cloud
 
-DONE
+DONE (newest on top)
+* add backend with swagger and connection to DB, run the app locally and DB in container
 * deploy to PWD (play-with-docker), see folder docker-stack
 
 ===================================================
 History (newest on top)
 ===================================================
-26.02.23 https://learn.microsoft.com/en-us/azure/container-instances/tutorial-docker-compose
+26.02.23 
+ https://learn.microsoft.com/en-us/azure/container-instances/tutorial-docker-compose
+ add backend with swagger and connection to DB, run the app locally and DB in container
 
 25.02.23 add docker-stack (run in PWD Play With Docker)
 
