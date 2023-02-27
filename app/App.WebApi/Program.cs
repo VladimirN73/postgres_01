@@ -20,6 +20,8 @@ public class Program
         
         var app = builder.Build();
 
+        Console.WriteLine($"app.Environment.IsDevelopment()='{app.Environment.IsDevelopment()}'");
+
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {

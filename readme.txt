@@ -21,6 +21,10 @@ DONE (newest on top)
 ===================================================
 History (newest on top)
 ===================================================
+27.02.23
+ https://docs.docker.com/docker-hub/repos/
+ create image img-erp-webapi and put it into docker hub
+ 
 26.02.23 
  https://learn.microsoft.com/en-us/azure/container-instances/tutorial-docker-compose
  add backend with swagger and connection to DB, run the app locally and DB in container

@@ -11,6 +11,12 @@ services:
       file: ./02-docker-compose.pgadm.yml
       service: pgadmin
 
+  webapi:
+    extends:
+      file: ./03-docker-compose.webapi.yml
+      service: webapi
+
+
 networks:
   default:
     driver: bridge
