@@ -21,6 +21,9 @@ DONE (newest on top)
 ===================================================
 History (newest on top)
 ===================================================
+28.02.23
+ re-try create-push-pull-run. It works! Just navigate to http://localhost:8080/swagger/index.html
+ 
 27.02.23
  https://docs.docker.com/docker-hub/repos/
  create image img-erp-webapi and put it into docker hub
