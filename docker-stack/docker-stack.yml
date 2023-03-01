@@ -40,6 +40,7 @@ services:
     networks:
       - default
     volumes:
+      - webapi:/var/lib/webapi
     ports:
       - 8080:80
 
@@ -49,3 +50,4 @@ networks:
 volumes:
   db-data:
   pgadmin-data:     
+  webapi:
