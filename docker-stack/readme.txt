@@ -26,6 +26,7 @@ commands/steps:
 =====================================================================
 History (newest on top)
 =====================================================================
+01.03.23 add service 'webapi'
 25.02.23 
 follow https://training.play-with-docker.com/ops-s1-swarm-intro/#
 created
