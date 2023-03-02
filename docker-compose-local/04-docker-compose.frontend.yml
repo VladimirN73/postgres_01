@@ -1,0 +1,14 @@
+
+services:
+
+  frontend:
+    build: ../frontend/.
+    image: img-erp-frontend
+    hostname: frontend
+    container_name: ctn-erp-frontend$BLA
+    networks:
+      - default
+    volumes:
+    ports:
+      - 3000:3000
+  

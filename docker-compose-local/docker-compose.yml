@@ -1,0 +1,32 @@
+
+
+services:
+  postgresql:
+    extends:
+      file: ./01-docker-compose.psql.yml
+      service: postgresql
+
+  pgadmin:
+    extends:
+      file: ./02-docker-compose.pgadm.yml
+      service: pgadmin
+
+  webapi:
+    extends:
+      file: ./03-docker-compose.webapi.yml
+      service: webapi
+
+  frontend:
+    extends:
+      file: ./04-docker-compose.frontend.yml
+      service: frontend
+
+networks:
+  default:
+    driver: bridge
+
+volumes:
+  db-data:
+    driver: local
+  pgadmin-data:
+    driver: local        

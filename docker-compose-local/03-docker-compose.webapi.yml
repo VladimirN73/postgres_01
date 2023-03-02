@@ -1,0 +1,16 @@
+
+services:
+
+  webapi:
+    build: ../app/App.WebApi/.
+    image: img-erp-webapi
+    hostname: webapi
+    container_name: ctn-erp-webapi$BLA
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development 
+    networks:
+      - default
+    volumes:
+    ports:
+      - 8080:80
+  
