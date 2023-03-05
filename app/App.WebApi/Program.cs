@@ -51,9 +51,12 @@ public class Program
         app.UseSwagger();
         app.UseSwaggerUI();
 
-        app.UseCors(corsPolicyName); //https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-7.0
+        if (!string.Equals(app.Environment.EnvironmentName,"PWD", StringComparison.OrdinalIgnoreCase))
+        {
+            app.UseCors(corsPolicyName); //https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-7.0
 
-        app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
+        }
 
         app.UseAuthorization();
         app.MapControllers();
