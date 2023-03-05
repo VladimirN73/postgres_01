@@ -37,9 +37,19 @@ services:
     networks:
       - default
     volumes:
-      - webapi:/var/lib/webapi
+      - webapi:/var/lib/webapi  # TODO fix/adapt/check the path
     ports:
       - 8080:80
+
+  frontend:
+    image: vnalivaika/img-erp-frontend
+    hostname: frontend
+    networks:
+      - default
+    volumes:
+      - frontend:/var/lib/frontend  # TODO fix/adapt/check the path
+    ports:
+      - 80:3000
 
 networks:
   backend:
@@ -48,3 +58,4 @@ volumes:
   db-data:
   pgadmin-data:     
   webapi:
+  frontend:

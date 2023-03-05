@@ -26,7 +26,9 @@ commands/steps:
 =====================================================================
 History (newest on top)
 =====================================================================
-
+05.03.23
+ add service 'frontend'
+ 
 01.03.23 
  add service 'webapi'. hm, docker-stack in PWD does not work now ... 
  either noting is created or if created then the swagger/index.html is not working ...
