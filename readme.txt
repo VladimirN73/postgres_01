@@ -5,10 +5,8 @@ TODOs
 add backend with swagger and connection to DB, run the app in containers (in docker) and locally
 
 
-NEXT STEPS
-1. https does not work in PWD. Shall it be fixed?     
-   
-2. Create image (for app) by push into github, and upload it to docker-hub
+NEXT STEPS 
+1. Create image (for app) by push into github, and upload it to docker-hub
    
 2. deploy docker-compose to the azure-cloud
 
@@ -19,6 +17,8 @@ DONE (newest on top)
 * add backend with swagger and connection to DB, run the app locally and DB in container
 * deploy to PWD (play-with-docker), see folder docker-stack
 
+WILL NOT DONE
+1. https does not work in PWD. Shall it be fixed? ---- Nope. Probably not. Do not loose time for this  
 
 LINKS
 https://learn.microsoft.com/en-us/aspnet/core/security/docker-https?view=aspnetcore-7.0 
