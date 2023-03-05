@@ -19,6 +19,8 @@ REM docker push <hub-user>/<repo-name>:<tag>
 REM The image is then uploaded and available for use by your teammates and/or the community.
 
 docker login
+
 docker push vnalivaika/img-erp-webapi:latest
+docker push vnalivaika/img-erp-frontend:latest
 
 pause

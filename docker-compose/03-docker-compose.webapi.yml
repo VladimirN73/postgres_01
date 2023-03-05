@@ -6,7 +6,7 @@ services:
     hostname: webapi
     container_name: ctn-erp-webapi
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development 
+      - ASPNETCORE_ENVIRONMENT=PROD 
     networks:
       - default
     volumes:

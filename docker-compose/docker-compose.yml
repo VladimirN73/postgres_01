@@ -16,6 +16,10 @@ services:
       file: ./03-docker-compose.webapi.yml
       service: webapi
 
+  frontend:
+    extends:
+      file: ./04-docker-compose.frontend.yml
+      service: frontend
 
 networks:
   default:
