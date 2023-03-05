@@ -33,14 +33,13 @@ services:
     image: vnalivaika/img-erp-webapi
     hostname: webapi
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development 
+      - ASPNETCORE_ENVIRONMENT=PWD  # PlayWithDocker Environment 
     networks:
       - default
     volumes:
       - webapi:/var/lib/webapi  # TODO fix/adapt/check the path
     ports:
       - 8080:80
-      - 443:443
 
   frontend:
     image: vnalivaika/img-erp-frontend
