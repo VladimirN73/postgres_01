@@ -13,4 +13,5 @@ services:
     volumes:
     ports:
       - 8080:80
+      - 443:443
   

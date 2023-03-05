@@ -17,7 +17,7 @@ export default class ApiServiceFetch {
 }
 
 export function getInfo(): Promise<void | string> {
-    var ret = fetch('http://localhost:8080/api/Db/Info/', {
+    var ret = fetch('http://localhost:8080/api/Db/Info', {
         //mode: "cors", // no-cors, *cors, same-origin
         // headers: {
         //     "accept": "*/*",
