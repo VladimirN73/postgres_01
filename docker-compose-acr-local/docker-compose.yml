@@ -25,7 +25,9 @@ networks:
     driver: bridge
 
 volumes:
-  db-data:
-    driver: local
-  pgadmin-data:
-    driver: local        
+- name: db-data
+- name: pgadmin-data
+  azureFiles:
+    sharename: erpshare
+    storageAccountName: erpgroupestorage
+    storageAccountKey: N0GYV+pWo/dFQLoS59fVF/J71/x5FXdRjNIg2sSxsMeu/RkYSJPwp+TDa0FGkQ3BTcCz5vvHIG0A+AStRIMeuQ==

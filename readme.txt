@@ -6,9 +6,11 @@ add backend with swagger and connection to DB, run the app in containers (in doc
 
 
 NEXT STEPS 
-1. Create image (for app) by push into github, and upload it to docker-hub
+1. deploy docker-compose-acr to the azure-cloud, usnig the images from docker-hub
+1. deploy docker-compose to the azure-cloud
+2. Create image (for app) by push into github, and upload it to docker-hub
    
-2. deploy docker-compose to the azure-cloud
+
 
 DONE (newest on top)
 * use the uploaded docker image in docker-stack
@@ -26,10 +28,44 @@ https://learn.microsoft.com/en-us/aspnet/core/security/docker-https?view=aspnetc
 ===================================================
 History (newest on top)
 ===================================================
+09.03.23 
+ docker-compose up --build -d  <---- nothing happens
+ the key N0G... is copied from prev command
+ az storage account keys list --resource-group erp --account-name erpgroupestorage --query "[0].value" --output tsv
+ az storage share create --name erpshare --account-name erpgroupestorage
+ az storage account create --resource-group erp --name erpgroupestorage  --location westeurope  --sku Standard_LRS
+ check https://learn.microsoft.com/en-us/azure/container-instances/container-instances-volume-azure-files
+ docker-compose up --build -d    <---- ERROR, cannot retrieve fileshare name for Azure file share
+ cd C:\data\github\postgres_01\docker-compose-acr
+ az acr login --name erpcontainerregistry
+ now try to repeat the below steps my erp-app
+ 
+ docker compose down
+ check that the services available inazure -- yes, it works.
+ docker ps   <---- see the ip where the services are running.
+ docker compose up
+ docker context use myacicontext
+ docker context ls
+ docker context create aci myacicontext
+ docker login azure
+ az acr repository show --name votegroupeacr --repository azure-vote-front
+ docker-compose push
+ docker-compose up --build -d 
+ cd c:\data\github\azure-voting-app-redis\
+ az acr login --name votegroupeacr
+ continue tutorial https://learn.microsoft.com/en-us/azure/container-instances/tutorial-docker-compose
+ 
+06.03.23
+ in azure create container registry 'erpcontainerregistry'
+ in azure create the resource group 'erp'
+ follow this tutorial https://learn.microsoft.com/en-us/azure/container-instances/tutorial-docker-compose
+ try to deploy docker-compose to the azure-cloud
+ 
 05.03.23
  docker-stack (pwd) does not work due to https
  remote docker-compose is done
- local docker-compose is done 
+ local docker-compose is done
+ 
 28.02.23
  re-try create-push-pull-run. It works! Just navigate to http://localhost:8080/swagger/index.html
  

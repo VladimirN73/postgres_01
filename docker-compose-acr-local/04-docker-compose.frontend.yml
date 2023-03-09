@@ -1,0 +1,14 @@
+
+services:
+
+  frontend:
+    build: ../frontend/.
+    image: erpcontainerregistry.azurecr.io/img-erp-frontend
+    hostname: webapi
+    container_name: ctn-erp-frontend
+    networks:
+      - default
+    volumes:
+    ports:
+      - 80:3000
+  
