@@ -28,6 +28,20 @@ https://learn.microsoft.com/en-us/aspnet/core/security/docker-https?view=aspnetc
 ===================================================
 History (newest on top)
 ===================================================
+12.23.03
+ https://docs.docker.com/cloud/aci-integration/#using-azure-file-share-as-volumes-in-aci-containers
+ 
+ probably the issue with volumes
+
+ docker-compose up  <--- nothing happens
+ docker context ls
+ docker context use erpcontext
+ docker context create aci erpcontext
+ docker login azure
+ cd C:\data\github\postgres_01\docker-compose-acr
+ az acr login --name erpcontainerregistry
+ try to repeat the below steps my erp-app : doker-compose-acr
+
 09.03.23 
  docker-compose up --build -d  <---- nothing happens
  the key N0G... is copied from prev command
@@ -36,15 +50,15 @@ History (newest on top)
  az storage account create --resource-group erp --name erpgroupestorage  --location westeurope  --sku Standard_LRS
  check https://learn.microsoft.com/en-us/azure/container-instances/container-instances-volume-azure-files
  docker-compose up --build -d    <---- ERROR, cannot retrieve fileshare name for Azure file share
- cd C:\data\github\postgres_01\docker-compose-acr
+ cd C:\data\github\postgres_01\docker-compose-acr-local
  az acr login --name erpcontainerregistry
  now try to repeat the below steps my erp-app
  
  docker compose down
- check that the services available inazure -- yes, it works.
+ check that the services available in azure -- yes, it works.
  docker ps   <---- see the ip where the services are running.
  docker compose up
- docker context use myacicontext
+ 
  docker context ls
  docker context create aci myacicontext
  docker login azure

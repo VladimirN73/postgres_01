@@ -1,0 +1,14 @@
+services:
+  postgresql:
+    image: postgres:14
+    hostname: postgres
+    container_name: ctn-postgres
+    environment:
+      - POSTGRES_USER=TLM
+      - POSTGRES_PASSWORD=TLM
+      - POSTGRES_DB=erpx
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+

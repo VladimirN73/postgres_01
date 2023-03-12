@@ -1,0 +1,8 @@
+services:
+  azure-vote-front:
+    image: votegroupeacr.azurecr.io/azure-vote-front
+    container_name: azure-vote-front
+    environment:
+      REDIS: azure-vote-back
+    ports:
+        - "80:80"

@@ -1,0 +1,13 @@
+
+services:
+
+  frontend:
+    image: vnalivaika/img-erp-frontend
+    hostname: webapi
+    container_name: ctn-erp-frontend
+    networks:
+      - default
+    volumes:
+    ports:
+      - 80:3000
+  

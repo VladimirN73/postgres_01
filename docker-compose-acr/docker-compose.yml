@@ -1,0 +1,31 @@
+services:
+  myservice:
+    image: nginx
+    volumes:
+      - mydata:/mount/testvolumes
+
+volumes:
+  mydata:
+    driver: azure_file
+    driver_opts:
+    share_name: erpshare
+    storage_account_name: erpgroupestorage
+
+# services:
+#   # azure-vote-back:
+#   #   extends:
+#   #     file: ./10-docker-compose.yml
+#   #     service: azure-vote-back
+
+#   postgresql:
+#     extends:
+#       file: ./01-docker-compose.psql.yml
+#       service: postgresql
+
+# volumes:
+#   db-data:
+#     driver: azure_file
+#     driver_opts:
+#     share_name: erpshare
+#     storage_account_name: erpgroupestorage
+#     #storage_account_key: N0GYV+pWo/dFQLoS59fVF/J71/x5FXdRjNIg2sSxsMeu/RkYSJPwp+TDa0FGkQ3BTcCz5vvHIG0A+AStRIMeuQ==     

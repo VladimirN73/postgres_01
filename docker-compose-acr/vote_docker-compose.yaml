@@ -1,0 +1,11 @@
+version: '3'
+services:
+  azure-vote-back:
+    extends:
+      file: ./10-docker-compose.yml
+      service: azure-vote-back
+
+  azure-vote-front:
+    extends:
+      file: ./11-docker-compose.yml
+      service: azure-vote-front

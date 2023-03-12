@@ -1,0 +1,16 @@
+
+services:
+
+  webapi:
+    image: vnalivaika/img-erp-webapi
+    hostname: webapi
+    container_name: ctn-erp-webapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=PROD 
+    networks:
+      - default
+    volumes:
+    ports:
+      - 8080:80
+      - 443:443
+  
